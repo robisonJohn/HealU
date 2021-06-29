@@ -38,7 +38,7 @@ components:</p>
 
 # API
 <p>Our data exists in the following format: </p>
-![API data](/images/api.png)
+![API data](/images/api-final.png)
 
 <p>Unsure why this link is broken, but the image is attached in the images folder. Working on resolving this.</p>
 
