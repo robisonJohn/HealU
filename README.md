@@ -40,6 +40,8 @@ components:</p>
 <p>Our data exists in the following format: </p>
 ![API data](/images/api.png)
 
+<p>Unsure why this link is broken, but the image is attached in the images folder. Working on resolving this.</p>
+
 
 # MVP
 <p>The goal for the MVP is to have an application that takes the following items as input</p>
