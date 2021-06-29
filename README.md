@@ -14,17 +14,23 @@ components:</p>
 
 # Wireframes
 ## Desktop
-![Desktop Wireframe]
+![Desktop Home](/images/desktop-home.png)
+![Desktop Form](/images/desktop-form.png)
+![Desktop End](/images/desktop-end.png)
+![Desktop Results](/images/desktop-results.png)
 
 ## Mobile
-![Mobile Wireframe]
+![Mobile Home](/images/mobile-home.png)
+![Mobile Form](/images/mobile-form.png)
+![Mobile End](/images/mobile-end.png)
+![Mobile Results](/images/mobile-results.png)
 
 # Component Hierarchy
-![Component Hierarchy]()
+![Component Hierarchy](/images/components.png)
 
 # API
 <p>Our data exists in the following format: </p>
-![API data]()
+![API data](/images/api.png)
 
 
 # MVP
@@ -45,7 +51,7 @@ components:</p>
 <p>Implement Bootstrap, time permitting</p>
 
 # Project Schedule and Timeframe
-![Project Schedule and Timeframe]()
+![Project Schedule and Timeframe](/images/timeframe.png)
 
 # SWOT Analysis
 <p>Strengths: I am intrinsically super passionate about and interested in this topic, so this will make the overall process more enjoyable. When something is fun,
