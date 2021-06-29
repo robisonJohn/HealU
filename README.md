@@ -37,10 +37,10 @@ components:</p>
 ![Component Hierarchy](/images/components.png)
 
 # API
-<p>Our data exists in the following format: </p>
-![API data](/images/api-final.png)
 
-<p>Unsure why this link is broken, but the image is attached in the images folder. Working on resolving this.</p>
+![APIdata](/images/api-final.png)
+
+
 
 
 # MVP
