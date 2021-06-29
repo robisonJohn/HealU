@@ -15,15 +15,23 @@ components:</p>
 # Wireframes
 ## Desktop
 ![Desktop Home](/images/desktop-home.png)
+<br />
 ![Desktop Form](/images/desktop-form.png)
+<br />
 ![Desktop End](/images/desktop-end.png)
+<br />
 ![Desktop Results](/images/desktop-results.png)
+<br />
 
 ## Mobile
 ![Mobile Home](/images/mobile-home.png)
+<br />
 ![Mobile Form](/images/mobile-form.png)
+<br />
 ![Mobile End](/images/mobile-end.png)
+<br />
 ![Mobile Results](/images/mobile-results.png)
+<br />
 
 # Component Hierarchy
 ![Component Hierarchy](/images/components.png)
