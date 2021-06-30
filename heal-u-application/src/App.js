@@ -11,6 +11,8 @@ import { baseURL, config } from "./services";
 function App() {
   const [feelings, setFeelings] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(true);
+  
+  
 
   useEffect(() => {
     const retrieveFeelings = async () => {
@@ -42,7 +44,9 @@ function App() {
 
       <Route path="/oldPosts">
       <main>
+
           {feelings.map((feeling) => (
+
             <Feeling key={feeling.id} feeling={feeling} setToggleFetch={setToggleFetch}/>
           ))}
         </main>

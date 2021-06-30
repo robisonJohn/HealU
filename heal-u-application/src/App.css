@@ -2,7 +2,6 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
 #home-button, #nav-button {
   font-weight:bolder;
   color: hotpink;
@@ -14,24 +13,66 @@ nav {
   height: 150px;
   margin: 10px;
   background-color: lightblue;
-
 }
-
-
 #home-button {
   font-size: 45px;
 }
-
 #nav-button {
   font-size: 25px;
 }
-
 body {
   background-color: lightpink;
 }
-
 main {
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
+.feelings-container {
+  border: 3px solid black;
+  width: 400px;
+  border-radius: 21%;
+  margin: 10px;
+  background-color: lightblue;
+}
+.total-feelings-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+#delete {
+  background-color: lightcoral;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-radius: 35%;
+  margin: 3px;
+}
+
+#edit {
+  background-color: lightgreen;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  border-radius: 35%;
+  margin: 3px;
+}
+
+#create-form {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  margin: 10px;
+  border-radius: 5%;
+  align-items: center;
+  width: 550px;
+}
+
+.form-item {
+  width: 500px;
+  margin: 10px;
+}
+
+
+
 
