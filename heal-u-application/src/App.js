@@ -43,13 +43,14 @@ function App() {
       </Route>  
 
       <Route path="/oldPosts">
-      <main>
-
+        <main>
           {feelings.map((feeling) => (
-
-            <Feeling key={feeling.id} feeling={feeling} setToggleFetch={setToggleFetch}/>
-          ))}
+          <Feeling key={feeling.id} feeling={feeling} setToggleFetch = {setToggleFetch}/>
+        )
+          
+        )}
         </main>
+        
       </Route>
 
       <Route path="/new">
