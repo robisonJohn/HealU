@@ -4,12 +4,17 @@ import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 
 function EditFeeling(props) {
-    const [emotion, setEmotion] = useState("");
-    const [magnitude, setMagnitude] = useState(0);
+    const [sentiment, setSentiment] = useState("");
+    const [emotionOne, setEmotionOne] = useState("");
+    const [emotionTwo, setEmotionTwo] = useState("");
+    const [emotionThree, setEmotionThree] = useState("");
+    const [magnitudeOne, setMagnitudeOne] = useState(0);
+    const [magnitudeTwo, setMagnitudeTwo] = useState(0);
+    const [magnitudeThree, setMagnitudeThree] = useState(0);
     const [reason, setReason] = useState("");
     const params = useParams();
     const history = useHistory();
-    
+
     useEffect(() => {
         // if there is an id AND feelings is longer than 0
         if (params.id && props.feelings.length > 0) {
@@ -17,8 +22,13 @@ function EditFeeling(props) {
             const feelingToEdit = props.feelings.find((feeling) => feeling.id === params.id);
             // if this feeling exists
             if (feelingToEdit) {
-                setEmotion(feelingToEdit.fields.emotion);
-                setMagnitude(feelingToEdit.fields.magnitude);
+                setSentiment(feelingToEdit.fields.sentiment);
+                setEmotionOne(feelingToEdit.fields.emotionOne);
+                setEmotionTwo(feelingToEdit.fields.emotionTwo);
+                setEmotionThree(feelingToEdit.fields.emotionThree);
+                setMagnitudeOne(feelingToEdit.fields.magnitudeOne);
+                setMagnitudeTwo(feelingToEdit.fields.magnitudeTwo);
+                setMagnitudeThree(feelingToEdit.fields.magnitudeThree);
                 setReason(feelingToEdit.fields.reason);
             }
         }
@@ -28,9 +38,14 @@ function EditFeeling(props) {
         e.preventDefault();
         // collect all stateful information in a new feelings object
         const newFeeling = {
-            emotion, 
-            magnitude,
+            emotionOne, 
+            magnitudeOne,
             reason,
+            emotionTwo,
+            magnitudeTwo,
+            emotionThree,
+            magnitudeThree,
+            sentiment,
         }
 
         if (params.id) {
@@ -53,25 +68,69 @@ function EditFeeling(props) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="emotion">How were you feeling on this day?</label>
+            <label htmlFor="sentiment">How are you feeling generally?</label>
             <input 
             type="text"
-            id="emotion"
-            value={emotion}
-            onChange={(e) => setEmotion(e.target.value)}
+            id="sentiment"
+            value={sentiment}
+            onChange={(e) => setSentiment(e.target.value)}
             required
             />
-            <label htmlFor="magnitude">On a scale from 1-10, how strongly were you feeling this way?</label>
+            <label htmlFor="emotionOne">What is the one major feeling you are experiencing today?</label>
+            <input 
+            type="text"
+            id="emotionOne"
+            value={emotionOne}
+            onChange={(e) => setEmotionOne(e.target.value)}
+            required
+            />
+            <label htmlFor="magnitudeOne">On a scale from 1-10, how strongly are you feeling this way?</label>
             <input 
             type="range"
-            id="magnitude"
+            id="magnitudeOne"
             min = {1}
             max = {10}
-            value={magnitude}
-            onChange={(e) => setMagnitude(e.target.valueAsNumber)}
+            value={magnitudeOne}
+            onChange={(e) => setMagnitudeOne(e.target.valueAsNumber)}
             required
             />
-            <label htmlFor="reason">Why do you think were are feeling this way?</label>
+            <label htmlFor="emotionTwo">What is another major feeling you are experiencing today?</label>
+            <input 
+            type="text"
+            id="emotionTwo"
+            value={emotionTwo}
+            onChange={(e) => setEmotionTwo(e.target.value)}
+            required
+            />
+            <label htmlFor="magnitudeTwo">On a scale from 1-10, how strongly are you feeling this way?</label>
+            <input 
+            type="range"
+            id="magnitudeTwo"
+            min = {1}
+            max = {10}
+            value={magnitudeTwo}
+            onChange={(e) => setMagnitudeTwo(e.target.valueAsNumber)}
+            required
+            />
+            <label htmlFor="emotionThree">What is a third major feeling you are experiencing today?</label>
+            <input 
+            type="text"
+            id="emotionThree"
+            value={emotionThree}
+            onChange={(e) => setEmotionThree(e.target.value)}
+            required
+            />
+            <label htmlFor="magnitudeThree">On a scale from 1-10, how strongly are you feeling this way?</label>
+            <input 
+            type="range"
+            id="magnitudeThree"
+            min = {1}
+            max = {10}
+            value={magnitudeThree}
+            onChange={(e) => setMagnitudeThree(e.target.valueAsNumber)}
+            required
+            />
+            <label htmlFor="reason">Why do you think you are feeling this way?</label>
             <textarea 
             id="reason"
             value={reason}
@@ -80,7 +139,7 @@ function EditFeeling(props) {
             </textarea>
             <button type="submit">Submit</button>
         </form>
-    )
+)
 
 }
 

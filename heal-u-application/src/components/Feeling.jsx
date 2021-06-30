@@ -3,7 +3,8 @@ import { baseURL, config } from "../services";
 import { Link } from "react-router-dom";
 
 function Feeling(props) {
-    const { emotion, magnitude, reason } = props.feeling.fields;
+    const { emotionOne, magnitudeOne, reason, emotionTwo, magnitudeTwo, 
+    emotionThree, magnitudeThree, sentiment } = props.feeling.fields;
 
     const deleteFeeling = async () => {
         // make our feeling url
@@ -18,9 +19,12 @@ function Feeling(props) {
     return (
         <article>
             <h3>{props.feeling.createdTime.slice(0, 10)}</h3>
-            <p>How I felt: {emotion}</p>
-            <p>Strength of feeling: {magnitude}</p>
-            <p>Why I felt this way: {reason}</p>
+            <p>How I generally feel: {sentiment}</p>
+            <p>Key emotions that contribute to my feeling: </p>
+            <p>{emotionOne} ({magnitudeOne})</p>
+            <p>{emotionTwo} ({magnitudeTwo})</p>
+            <p>{emotionThree} ({magnitudeThree})</p>
+            <p>Why I feel this way: {reason}</p>
             <button onClick={deleteFeeling}>Delete Record</button>
             <Link to={`/edit/${props.feeling.id}`}>
                 <button>Edit Feeling</button>
