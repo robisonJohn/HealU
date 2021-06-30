@@ -1,0 +1,37 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#home-button, #nav-button {
+  font-weight:bolder;
+  color: hotpink;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  
+  border-radius: 25%;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  background-color: lightblue;
+
+}
+
+
+#home-button {
+  font-size: 45px;
+}
+
+#nav-button {
+  font-size: 25px;
+}
+
+body {
+  background-color: lightpink;
+}
+
+main {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
