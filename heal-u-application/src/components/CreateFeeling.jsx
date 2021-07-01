@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function CreateFeeling(props) {
     const [sentiment, setSentiment] = useState("");
@@ -67,9 +69,9 @@ function CreateFeeling(props) {
     }
 
     return (
-        <form id="create-form" onSubmit={handleSubmit}>
-            <div className="form-item">
-                <label htmlFor="sentiment">How are you feeling generally?</label>
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label>How are you feeling generally?</label>
             </div>
             <div className="form-item">
                 <input 

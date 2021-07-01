@@ -1,4 +1,6 @@
 import axios from "axios";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, Button, Row, Col } from "react-bootstrap";
 import { baseURL, config } from "../services";
 import { Link } from "react-router-dom";
 
@@ -58,23 +60,30 @@ function Feeling(props) {
     }
 
     return (
-        <div className="total-feelings-container">
-            <article className="feelings-container">
-                <h3>{`${monthName} ${revisedDay}${ending} ${year}`}</h3>
-                <p><strong>How I generally feel: </strong>{sentiment}</p>
-                <p><strong>Key emotions that contribute to my feeling: </strong></p>
-                <div className="feelings-object">
-                    <p>{emotionOne} ({magnitudeOne})</p>
-                    <p>{emotionTwo} ({magnitudeTwo})</p>
-                    <p>{emotionThree} ({magnitudeThree})</p>
-                </div>
-                <p><strong>Why I feel this way: </strong>{reason}</p>
-                <button id="delete" onClick={deleteFeeling}>Delete Record</button>
-                <Link to={`/edit/${props.feeling.id}`}>
-                    <button id="edit">Edit Feeling</button>
-                </Link>
-            </article>
-        </div>
+
+        <Card>
+            <Card.Body>
+                <Card.Title>{`${monthName} ${revisedDay}${ending} ${year}`}</Card.Title>
+                <Card.Text><strong>How I generally feel: </strong> {sentiment}</Card.Text>
+                <Card.Text><strong>Key emotions that contribute to my feeling: </strong></Card.Text>
+                <Card.Text>1. {emotionOne} ({magnitudeOne})</Card.Text>
+                <Card.Text>2. {emotionTwo} ({magnitudeTwo})</Card.Text>
+                <Card.Text>3. {emotionThree} ({magnitudeThree})</Card.Text>
+                <Card.Text><strong>Why I feel this way: </strong>{reason}</Card.Text>
+            </Card.Body>
+            <Row>
+                <Col>
+                    <Button onClick={deleteFeeling}>Delete Record</Button>
+                </Col>
+                <Col>
+                    <Link to={`/edit/${props.feeling.id}`}>
+                        <Button>Edit Feeling</Button>
+                    </Link>
+                    
+                </Col>
+            </Row>
+
+        </Card>
         
     )
 };

@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap';
 
 function Navbar() {
     return (
         <nav>
-            <Link to="/"><button id="home-button">Heal U</button></Link>
+            <Link to="/"><Button id="home-button">Heal U</Button></Link>
             
             
         </nav>
