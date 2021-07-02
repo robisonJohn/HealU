@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Card, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 // the goal of this component is to render our home page greeting within a Card
 

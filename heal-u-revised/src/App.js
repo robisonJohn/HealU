@@ -17,7 +17,7 @@ import About from './components/About.jsx';
 import { useEffect, useState } from 'react';
 import { baseURL, config } from "./services";
 import { Route, Link } from 'react-router-dom';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 
 
