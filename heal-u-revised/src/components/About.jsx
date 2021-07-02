@@ -1,6 +1,10 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Link } from 'react-router-dom';
+import { Card } from 'react-bootstrap';
+
 function About() {
     return (
-        <main>
+        <main id="about-greeting">
             <Card className="greeting">
                 <Card.Body>
                     <Card.Text>
@@ -19,7 +23,7 @@ function About() {
             </Card>
             <Card className="greeting" id="footer">
                 <Card.Text>
-                        Interested in trying Heal U out? Click here to learn more!
+                        Interested in trying Heal U out? Click Heal U above and begin exploring your options!
                     </Card.Text>
             </Card>
         </main>

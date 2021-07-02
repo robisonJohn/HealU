@@ -4,7 +4,9 @@
     width: 400px;
     color: black;
     font-weight: bold;
-    background: linear-gradient(to right, lightblue, lightgreen);
+    background: linear-gradient(to right, lightblue, whitesmoke);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 #feeling-container {
@@ -26,11 +28,18 @@
 }
 
 #delete-button {
-    background: linear-gradient(to right, coral, crimson);
+    background: linear-gradient(to right, lightcoral, lightsalmon);
     
 }
 
 #edit-button {
-    background: linear-gradient(to right, yellow, orange)
+    background: linear-gradient(to right, lightseagreen, lightgreen)
 
+}
+
+#date {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
 }

@@ -12,11 +12,12 @@ import NavNewFeeling from './components/NavNewFeeling.jsx';
 import Feeling from './components/Feeling.jsx';
 import CreateFeeling from './components/CreateFeeling.jsx';
 import EditFeeling from './components/EditFeeling.jsx';
+import About from './components/About.jsx';
 // variable imports
 import { useEffect, useState } from 'react';
 import { baseURL, config } from "./services";
-import { Route } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
+import { Route, Link } from 'react-router-dom';
+import { Row, Col, Button } from 'react-bootstrap';
 
 
 
@@ -40,11 +41,13 @@ function App() {
       <Route exact path="/">
         <main>
             <Row>
-              <Greeting />
+              <Link to="/about">   
+                  <Greeting />
+              </Link>
+              
             </Row>
             <Col id="main-buttons">
               <Row id="button-1-position"><NavNewFeeling /></Row>
-
               <Row id="button-2-position"><NavOldFeeling /></Row>
             </Col>
           
@@ -67,6 +70,10 @@ function App() {
 
       <Route path="/edit/:id">
         <EditFeeling feelings={feelings} setToggleFetch={setToggleFetch}/>
+      </Route>
+
+      <Route path="/about">
+        <About />
       </Route>
     </div>
   );

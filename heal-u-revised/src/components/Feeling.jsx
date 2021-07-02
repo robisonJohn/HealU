@@ -80,7 +80,7 @@ function Feeling(props) {
         <Container id="feeling-container">
             <Card id="feeling-card">
                 <Card.Body>
-                    <Card.Title>{`${monthName} ${revisedDay}${ending} ${year}`}</Card.Title>
+                    <Card.Title id="date">{`${monthName} ${revisedDay}${ending} ${year}`}</Card.Title>
                     <Card.Text><strong>How I generally feel: </strong> {emotionType} ({magnitude})</Card.Text>
                     
                     <Card.Text><strong>Comfort: </strong>{comfort}</Card.Text>
