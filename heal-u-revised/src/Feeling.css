@@ -1,0 +1,36 @@
+#feeling-card {
+    margin: 20px;
+    padding: 10px;
+    width: 400px;
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(to right, lightblue, lightgreen);
+}
+
+#feeling-container {
+    display: grid;
+    justify-content: center;
+}
+
+#button-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#delete-button, #edit-button {
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#delete-button {
+    background: linear-gradient(to right, coral, crimson);
+    
+}
+
+#edit-button {
+    background: linear-gradient(to right, yellow, orange)
+
+}

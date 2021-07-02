@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(to right, lightpink, hotpink);
+}
+
+#main-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#button-1-position, #button-2-position {
+  margin: 10px;
+  
+}
+
+#button-1, #button-2 {
+  height: 125px;
+  width: 150px;
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(to right, purple, rebeccapurple);
+  color: white;
+}
+
+nav {
+  margin: 10px;
+}
+
+#home-button {
+  margin: 10px;
+  padding: 5px;
+  height: 100px;
+  width: 150px;
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(to right, purple, rebeccapurple);
+}
+
+.greeting {
+  margin: 10px;
+  padding: 5px;
+  background: linear-gradient(to right, purple, rebeccapurple);
+  max-width: 500px;
+  font-family:'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: whitesmoke;
+}
+#greeting-container {
+  display: grid;
+  justify-content: center;
+}
+#greeting-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+

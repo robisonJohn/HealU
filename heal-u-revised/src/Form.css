@@ -1,0 +1,54 @@
+#form-container {
+    display: grid;
+    justify-content: center;
+    
+}
+
+#form {
+    max-width: 500px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.form-item {
+    margin: 10px;
+}
+
+.row {
+    display: grid;
+    justify-content: center;
+}
+
+.range {
+    width: 400px;
+    margin: 10px;
+}
+.reason {
+    width: 400px;
+    margin: 10px; 
+    
+    
+}
+
+.label {
+    margin: 5px;
+}
+
+.form-card {
+    margin: 10px;
+    padding: 20px;
+    
+}
+
+#submit {
+    margin: 10px;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    background: linear-gradient(purple, rebeccapurple);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
