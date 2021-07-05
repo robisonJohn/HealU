@@ -28,19 +28,29 @@ function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav">
                         <li className="nav-item active">
-                            <Link className="nav-link">Home</Link>
+                            <Link to="/" className="nav-link">
+                                Home
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link">How are you feeling?</Link>
+                            <Link to="/new" className="nav-link">
+                                How are you feeling?
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link">How have you been?</Link>
+                            <Link to="/old" className="nav-link">
+                                How have you been?
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link">Visualize feelings</Link>
+                            <Link to="visualize" className="nav-link">
+                                Visualize feelings
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link">About Heal U</Link>
+                            <Link to="/about" className="nav-link">
+                                About Heal U
+                            </Link>
                         </li>
                         
                     </ul>
