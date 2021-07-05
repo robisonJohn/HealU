@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
-
+import './About.css';
 import { Card } from 'react-bootstrap';
 
 function About() {
@@ -16,7 +16,7 @@ function About() {
             <Card className="greeting">
                 <Card.Body>
                     <Card.Text>
-                        Tracking these trends are crucial towards gaining an understanding of the aspects of our life
+                        Tracking these trends is crucial towards gaining an understanding of the aspects of our life
                         that bring us fulfillment and meaning on a daily basis.
                     </Card.Text>
                 </Card.Body>

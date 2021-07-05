@@ -55,11 +55,12 @@ function App() {
       </Route>
 
       <Route path="/new">
-      <Navbar />
         <Form setToggleFetch={setToggleFetch}/>
       </Route>
 
-      <Route path="/"></Route>
+      <Route path="/edit/:id">
+        <Form feelings={feelings} setToggleFetch={setToggleFetch}/>
+      </Route>
 
       <Route path="/visualize"></Route>
 

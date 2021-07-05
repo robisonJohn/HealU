@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import { baseURL, config } from "../services";
 import { Link } from "react-router-dom";
+import './Feeling.css';
 
 function Feeling(props) {
     const { emotion, magnitude, comfort, safety, relationships, confidence,
