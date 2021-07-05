@@ -4,6 +4,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Card, Button, Col, Row, Container } from 'react-bootstrap';
+import "./Form.css";
 
 
 function CreateFeeling(props) {
@@ -64,7 +65,7 @@ function CreateFeeling(props) {
         props.setToggleFetch((curr) => !curr);
         // send the user home when they are done
         setTimeout(() => {
-            history.push("/");
+            history.push("/home");
         }, 1000);
 
     }
