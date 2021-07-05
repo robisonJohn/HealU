@@ -1,0 +1,72 @@
+:root {
+    --primary-white: #fff;
+    --primary-orange: orange;
+    --primary-dark: black;
+    --primary-red: #ef4035;
+    --primary-hover-red: #f33501;
+    --primary-blue: turquoise;
+    --primary-purple: rebeccapurple;
+    --primary-pink: hotpink;
+}
+
+.header-wrapper {
+    position: relative;
+    background: url(heal-u-edited.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+
+.main-info {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    z-index: 1;
+}
+
+.main-info h1 {
+    color: var(--primary-blue);
+    margin: 10px;
+    font-weight: bolder;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* Typed Text */
+.typed-text {
+    font-size: 2rem;
+    color: var(--primary-white);
+}
+
+/* Header main button */
+.btn-main {
+    border: 1px solid var(--primary-purple);
+    text-transform: uppercase;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    color: var(--primary-white);
+    background-color: var(--primary-pink);
+    margin: 2rem;
+}
+
+.btn-main:hover {
+    text-decoration: none;
+    background-color: var(--primary-purple);
+    border: 1px solid var(--primary-pink);
+    transition: 0.2s ease-in-out;
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+    .main-info h1 {
+        font-size: 1.7rem !important;
+    }
+    .typed-text {
+        font-size: 1.3rem !important;
+    }
+}
