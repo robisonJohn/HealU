@@ -14,6 +14,8 @@ import { Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { baseURL, config } from "./services";
 
+import { Table } from 'react-bootstrap';
+
 function App() {
   const [feelings, setFeelings] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(true);
@@ -47,11 +49,33 @@ function App() {
       
 
       <Route path="/old">
-        <main>
+          <Table striped bordered hover variant="dark">
+            <thead>
+                <tr>
+                <th>Love</th>
+                <th>Peace</th>
+                <th>Pride</th>
+                <th>Joy</th>
+                <th>Intrigue</th>
+                <th>Trust</th>
+                <th>Comfort</th>
+                <th>Safety</th>
+                <th>Relationships</th>
+                <th>Confidence</th>
+                <th>Actualization</th>
+                <th>Reason</th>
+                </tr>
+            </thead>
             {feelings.map((feeling) => (
-            <Feeling key={feeling.id} feeling={feeling} setToggleFetch = {setToggleFetch}/>
-          ))}
-        </main>  
+              <Feeling key={feeling.id} feeling={feeling} setToggleFetch = {setToggleFetch} />
+            ))}
+            
+        </Table> 
+
+
+          
+
+        
       </Route>
 
       <Route path="/new">

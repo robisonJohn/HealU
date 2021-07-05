@@ -8,8 +8,12 @@ import "./Form.css";
 
 
 function CreateFeeling(props) {
-    const [emotion, setEmotion] = useState(0);
-    const [magnitude, setMagnitude] = useState(0);
+    const [love, setLove] = useState(0);
+    const [peace, setPeace] = useState(0);
+    const [pride, setPride] = useState(0);
+    const [joy, setJoy] = useState(0);
+    const [intrigue, setIntrigue] = useState(0);
+    const [trust, setTrust] = useState(0);
     const [comfort, setComfort] = useState(0);
     const [safety, setSafety] = useState(0);
     const [relationships, setRelationships] = useState(0);
@@ -27,8 +31,12 @@ function CreateFeeling(props) {
             const feelingToEdit = props.feelings.find((feeling) => feeling.id === params.id);
             // if this feeling exists
             if (feelingToEdit) {
-                setEmotion(feelingToEdit.fields.emotion);
-                setMagnitude(feelingToEdit.fields.magnitude);
+                setLove(feelingToEdit.fields.love);
+                setPeace(feelingToEdit.fields.peace);
+                setPride(feelingToEdit.fields.pride);
+                setJoy(feelingToEdit.fields.joy);
+                setIntrigue(feelingToEdit.fields.intrigue);
+                setTrust(feelingToEdit.fields.trust);
                 setComfort(feelingToEdit.fields.comfort);
                 setSafety(feelingToEdit.fields.safety);
                 setRelationships(feelingToEdit.fields.relationships);
@@ -43,8 +51,12 @@ function CreateFeeling(props) {
         e.preventDefault();
         // collect all stateful information in a new feelings object
         const newFeeling = {
-            emotion,
-            magnitude,
+            love,
+            peace,
+            pride,
+            joy,
+            intrigue,
+            trust,
             comfort,
             safety,
             relationships,
@@ -83,8 +95,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Disgusted (repulsion) to Loving (attraction), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={love} min={0} max={7}
+                            onChange={(e) => setLove(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row className="emoji">🤢</Row>
@@ -100,8 +112,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Angry (indignant) to Peaceful (acceptance), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={peace} min={0} max={7}
+                            onChange={(e) => setPeace(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row>😡</Row>
@@ -117,8 +129,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Ashamed (self-judgement) to Proud (self-acceptance), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={pride} min={0} max={7}
+                            onChange={(e) => setPride(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row>😳</Row>
@@ -135,8 +147,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Sad (loss) to Joyful (gain), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={joy} min={0} max={7}
+                            onChange={(e) => setJoy(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row>😢</Row>
@@ -153,8 +165,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Surprised (caught off guard) to Intrigued (attentive), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={intrigue} min={0} max={7}
+                            onChange={(e) => setIntrigue(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row>😮</Row>
@@ -171,8 +183,8 @@ function CreateFeeling(props) {
                                 <Form.Label className="label">On a scale from Afraid (threat) to Trusting (security), how are you feeling?</Form.Label>
                             </Row>
                             <Row className="row">
-                                <Form.Control type="range" value={emotion} min={0} max={7}
-                            onChange={(e) => setEmotion(e.target.valueAsNumber)} className="range"/>
+                                <Form.Control type="range" value={trust} min={0} max={7}
+                            onChange={(e) => setTrust(e.target.valueAsNumber)} className="range"/>
                             </Row>
                             <Col id="emoji-column">
                                 <Row>😱</Row>
@@ -283,11 +295,6 @@ function CreateFeeling(props) {
                                 <Form.Control type="textarea" rows={3} value={reason} 
                                     onChange={(e) => setReason(e.target.value)} className="reason"/>
                             </Row>
-                            <Col id="emoji-column">
-                                <Row>❌</Row>
-                                <Row>0️⃣</Row>
-                                <Row>✅</Row>
-                            </Col>
                         </Form.Group>
                     </Card>
                     <Button type="submit" id="submit">Submit</Button>

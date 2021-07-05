@@ -4,9 +4,10 @@ import { Card, Button, Row, Col, Container } from "react-bootstrap";
 import { baseURL, config } from "../services";
 import { Link } from "react-router-dom";
 import './Feeling.css';
+import { Table } from 'react-bootstrap';
 
 function Feeling(props) {
-    const { emotion, magnitude, comfort, safety, relationships, confidence,
+    const { love, peace, pride, joy, intrigue, trust, comfort, safety, relationships, confidence,
     actualization, reason } = props.feeling.fields;
 
     const time = props.feeling.createdTime;
@@ -59,7 +60,7 @@ function Feeling(props) {
         props.setToggleFetch((curr) => !curr);
 
     }
-
+/*
     let emotionType = '';
 
     if (parseInt(emotion) === 1) {
@@ -75,40 +76,27 @@ function Feeling(props) {
     } else if (parseInt(emotion) === 6) {
         emotionType = 'Fear';
     }
+*/
 
 
     return (
-        <Container id="feeling-container">
-            <Card id="feeling-card">
-                <Card.Body>
-                    <Card.Title id="date">{`${monthName} ${revisedDay}${ending} ${year}`}</Card.Title>
-                    <Card.Text><strong>How I generally feel: </strong> {emotionType} ({magnitude})</Card.Text>
-                    
-                    <Card.Text><strong>Comfort: </strong>{comfort}</Card.Text>
-                    <Card.Text><strong>Safety: </strong>{safety}</Card.Text>
-                    <Card.Text><strong>Comfort: </strong>{relationships}</Card.Text>
-                    <Card.Text><strong>Confidence: </strong>{confidence}</Card.Text>
-                    <Card.Text><strong>Self-Actualization: </strong>{actualization}</Card.Text>
+            <tbody>
+                <tr>
+                <td>{love}</td>
+                <td>{peace}</td>
+                <td>{pride}</td>
+                <td>{joy}</td>
+                <td>{intrigue}</td>
+                <td>{trust}</td>
+                <td>{comfort}</td>
+                <td>{safety}</td>
+                <td>{relationships}</td>
+                <td>{confidence}</td>
+                <td>{actualization}</td>
+                <td>{reason}</td>
+                </tr>
+            </tbody>
 
-                    <Card.Text><strong>Why I feel this way: </strong>{reason}</Card.Text>
-                </Card.Body>
-                <Row id="button-grid">
-                    <Col>
-                        <Button onClick={deleteFeeling} id="delete-button">Delete Feeling</Button>
-                    </Col>
-                    <Col>
-                        <Link to={`/edit/${props.feeling.id}`}>
-                            <Button id="edit-button">Edit Feeling</Button>
-                        </Link>
-                        
-                    </Col>
-                </Row>
-
-            </Card>
-        </Container>
-
-        
-        
     )
 };
 
