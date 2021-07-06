@@ -20,7 +20,10 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
             <div className="container">
-                <Card className="navbar-brand">Heal U</Card>
+                <Link to="/">
+                    <Card className="navbar-brand">Heal U</Card>
+                </Link>
+                
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <FontAwesomeIcon icon={faBars} style={{color: "#fff"}}/>
                 </button>

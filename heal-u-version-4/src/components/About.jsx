@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './About.css';
-import { Card } from 'react-bootstrap';
+import { Card, ListGroup } from 'react-bootstrap';
 
 function About() {
     return (
@@ -28,39 +28,39 @@ function About() {
                     Heal U's methodology is largely based on two bodies of research:
                     </Card.Text>
                     <Card.Text>
-                        <ul>
-                            <li>The feelings wheel, developed by psychologist Robert Plutchik, suggests that people experience twelve core
+                        <ListGroup>
+                            <ListGroup.Item>The feelings wheel, developed by psychologist Robert Plutchik, suggests that people experience twelve core
                                 emotions that come in pairs, i.e. sadness and joy. These pairs of emotions include the following:
-                                <ul>
-                                    <li>Peaceful - Angry</li>
-                                    <li>Ashamed - Proud</li>
-                                    <li>Sad - Joyful</li>
-                                    <li>Surprised - Intrigued</li>
-                                    <li>Afraid - Trusting</li>
-                                    <li>Disgusted - Loving</li>
-                                </ul>
-                            </li>
-                            <li>Maslow's Hierarchy of Needs, developed by psychologist Abraham Maslow, suggests that huamns have a hierarchy of 
+                                <ListGroup>
+                                    <ListGroup.Item>Peaceful - Angry</ListGroup.Item>
+                                    <ListGroup.Item>Ashamed - Proud</ListGroup.Item>
+                                    <ListGroup.Item>Sad - Joyful</ListGroup.Item>
+                                    <ListGroup.Item>Surprised - Intrigued</ListGroup.Item>
+                                    <ListGroup.Item>Afraid - Trusting</ListGroup.Item>
+                                    <ListGroup.Item>Disgusted - Loving</ListGroup.Item>
+                                </ListGroup>
+                            </ListGroup.Item>
+                            <ListGroup.Item>Maslow's Hierarchy of Needs, developed by psychologist Abraham Maslow, suggests that huamns have a hierarchy of 
                                 needs which they seek to fulfill in order of importance. These needs are as follows:
-                                <ul>
-                                    <li>Basic Needs</li>
-                                    <ul>
-                                        <li>Physiological Needs - food, water, warmth, rest</li>
-                                        <li>Safety - security, safety</li>
-                                    </ul>
-                                    <li>Psychological</li>
-                                    <ul>
-                                        <li>Love and Belonging - friends, intimate relationships</li>
-                                        <li>Esteem - prestige, feeling of accomplishment</li>
-                                    </ul>
-                                    <li>Self-Fulfillment Needs</li>
-                                    <ul>
-                                        <li>Self-Actualization - achieving one's full potential</li>
-                                    </ul>
+                                <ListGroup>
+                                    <ListGroup.Item>Basic Needs</ListGroup.Item>
+                                    <ListGroup>
+                                        <ListGroup.Item>Physiological Needs - food, water, warmth, rest</ListGroup.Item>
+                                        <ListGroup.Item>Safety - security, safety</ListGroup.Item>
+                                    </ListGroup>
+                                    <ListGroup.Item>Psychological</ListGroup.Item>
+                                    <ListGroup>
+                                        <ListGroup.Item>Love and Belonging - friends, intimate relationships</ListGroup.Item>
+                                        <ListGroup.Item>Esteem - prestige, feeling of accomplishment</ListGroup.Item>
+                                    </ListGroup>
+                                    <ListGroup.Item>Self-Fulfillment Needs</ListGroup.Item>
+                                    <ListGroup>
+                                        <ListGroup.Item>Self-Actualization - achieving one's full potential</ListGroup.Item>
+                                    </ListGroup>
 
-                                </ul>
-                            </li>
-                        </ul>
+                                </ListGroup>
+                            </ListGroup.Item>
+                        </ListGroup>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -79,11 +79,11 @@ function About() {
                         Presently, the app works by entering your data into a form and then visualizing this data in the form of a histogram
                         that measures the relative fulfillment of each category. Eventually, it would be interesting to expand this project to 
                         include the following features:
-                        <ul>
-                            <li>K-means clustering of emotional pairs</li>
-                            <li>Multiple regression analysis between Maslowian needs and emotions</li>
-                            <li>Visualize emotional data over time</li>
-                        </ul>
+                        <ListGroup>
+                            <ListGroup.Item>K-means clustering of emotional pairs</ListGroup.Item>
+                            <ListGroup.Item>Multiple regression analysis between Maslowian needs and emotions</ListGroup.Item>
+                            <ListGroup.Item>Visualize emotional data over time</ListGroup.Item>
+                        </ListGroup>
                         To do these projects, a much larger quantity of unbiased data is required. This is the next step for this application!
                     </Card.Text>
             </Card>

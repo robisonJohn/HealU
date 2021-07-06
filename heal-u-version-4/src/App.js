@@ -35,7 +35,10 @@ function App() {
   console.log(feelings);
   return (
     <div className="App">
-      <Navbar />
+      <Route path="/">
+        <Navbar />
+      </Route>
+      
       <Route path="/home">
         
         <main>
