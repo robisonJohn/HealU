@@ -1,10 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card, Button, Row, Col, Container } from "react-bootstrap";
-import { baseURL, config } from "../services";
-import { Link } from "react-router-dom";
+// import { Card, Button, Row, Col, Container } from "react-bootstrap";
+// import { baseURL, config } from "../services";
+// import { Link } from "react-router-dom";
 import './Feeling.css';
-import { Table } from 'react-bootstrap';
+// import { Table } from 'react-bootstrap';
 
 function Feeling(props) {
     const { love, peace, pride, joy, intrigue, trust, comfort, safety, relationships, confidence,
@@ -51,6 +51,7 @@ function Feeling(props) {
         }
     }
 
+    /*
     const deleteFeeling = async () => {
         // make our feeling url
         const feelingURL = `${baseURL}/${props.feeling.id}`;
@@ -60,6 +61,9 @@ function Feeling(props) {
         props.setToggleFetch((curr) => !curr);
 
     }
+    */
+
+
 /*
     let emotionType = '';
 
@@ -80,7 +84,7 @@ function Feeling(props) {
 
 
     return (
-            <tbody>
+            <tbody id="reason-section">
                 <tr>
                 <td>{love}</td>
                 <td>{peace}</td>
@@ -93,9 +97,11 @@ function Feeling(props) {
                 <td>{relationships}</td>
                 <td>{confidence}</td>
                 <td>{actualization}</td>
-                <td>{reason}</td>
+                <td >{reason}</td>
+                <td>{monthName} {revisedDay}{ending} {year}</td>
                 </tr>
             </tbody>
+            
 
     )
 };

@@ -16,7 +16,7 @@ const Header = () => {
                 typeSpeed={100}
                 backSpeed={100}
                 />
-                <Link to="/old"><Button className="btn-main">Tell us how you're feeling</Button></Link>
+                <Link to="/new"><Button className="btn-main">Tell us how you're feeling</Button></Link>
                 
                 
             </div>

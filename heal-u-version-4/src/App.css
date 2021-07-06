@@ -3,6 +3,24 @@ body {
   background: linear-gradient(to right, rebeccapurple, purple);
 }
 
+#feelings-table {
+  width: 70vw;
+  margin: 10px;
+}
+
+#feelings-header {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  color: lightblue;
+}
+
+#table-grid {
+  display: grid;
+  justify-content: center;
+}
+
 
 /* PARTICLE JS */
 .tsparticles-canvas-el {

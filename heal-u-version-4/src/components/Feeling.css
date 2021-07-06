@@ -43,3 +43,9 @@
     font-family: 'Poppins', sans-serif;
     font-size: 25px;
 }
+
+#reason-section {
+    width: 200px;
+    white-space: normal;
+    word-wrap: break-word;
+}

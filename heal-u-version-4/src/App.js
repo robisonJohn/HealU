@@ -49,28 +49,32 @@ function App() {
       
 
       <Route path="/old">
-          <Table striped bordered hover variant="dark">
-            <thead>
-                <tr>
-                <th>Love</th>
-                <th>Peace</th>
-                <th>Pride</th>
-                <th>Joy</th>
-                <th>Intrigue</th>
-                <th>Trust</th>
-                <th>Comfort</th>
-                <th>Safety</th>
-                <th>Relationships</th>
-                <th>Confidence</th>
-                <th>Actualization</th>
-                <th>Reason</th>
-                </tr>
-            </thead>
-            {feelings.map((feeling) => (
-              <Feeling key={feeling.id} feeling={feeling} setToggleFetch = {setToggleFetch} />
-            ))}
-            
-        </Table> 
+        <main id="table-grid">
+          <Table responsive="lg" striped bordered hover variant="dark" id="feelings-table">
+              <thead>
+                  <tr>
+                  <th>Love</th>
+                  <th>Peace</th>
+                  <th>Pride</th>
+                  <th>Joy</th>
+                  <th>Intrigue</th>
+                  <th>Trust</th>
+                  <th>Comfort</th>
+                  <th>Safety</th>
+                  <th>Relationships</th>
+                  <th>Confidence</th>
+                  <th>Actualization</th>
+                  <th>Reason</th>
+                  <th>Date</th>
+                  </tr>
+              </thead>
+              {feelings.map((feeling) => (
+                <Feeling key={feeling.id} feeling={feeling} setToggleFetch = {setToggleFetch} />
+              ))}
+              
+          </Table> 
+        </main>
+          
 
 
           
