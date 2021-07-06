@@ -9,6 +9,7 @@ import ParticlesWrapper from "./components/ParticlesWrapper.jsx";
 import Feeling from "./components/Feeling.jsx";
 import About from "./components/About.jsx";
 import Form from "./components/Form.jsx";
+import BarChart from './components/BarChart/BarChart.jsx';
 // import BarChart from './components/BarChart.jsx';
 
 import { Route } from 'react-router-dom';
@@ -40,15 +41,10 @@ function App() {
       </Route>
       
       <Route path="/home">
-        
         <main>
           <ParticlesWrapper />
-
           <Header />
-          
-          
         </main>
-        
       </Route>
       
 
@@ -90,8 +86,7 @@ function App() {
       </Route>
 
       <Route path="/visualize">
-        
-
+        <BarChart />
       </Route>
 
       <Route path="/about">
