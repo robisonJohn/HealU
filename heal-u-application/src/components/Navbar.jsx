@@ -6,8 +6,6 @@ function Navbar() {
     return (
         <nav>
             <Link to="/"><Button id="home-button">Heal U</Button></Link>
-            
-            
         </nav>
     )
 }

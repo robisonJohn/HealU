@@ -2,7 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { baseURL, config } from "../services";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form } from 'react-bootstrap';
 
 
 function CreateFeeling(props) {
@@ -69,32 +70,26 @@ function CreateFeeling(props) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label>How are you feeling generally?</label>
-            </div>
-            <div className="form-item">
-                <input 
-                type="text"
-                id="sentiment"
+        <Form onSubmit={handleSubmit}>
+            <Form.Group>
+                <Form.Label>How are you feeling generally?</Form.Label>
+                <Form.Text 
                 value={sentiment}
                 onChange={(e) => setSentiment(e.target.value)}
-                required
                 />
-            </div>
+            </Form.Group>
 
-            <div className="form-item">
-                <label htmlFor="emotionOne">What is the one major feeling you are experiencing today?</label>
-            </div>
-            <div className="form-item">
-                <input 
-                type="text"
-                id="emotionOne"
+            <Form.Group>
+                <Form.Label>What is the one major feeling you are experiencing today?</Form.Label>
+                <Form.Text 
+                
                 value={emotionOne}
                 onChange={(e) => setEmotionOne(e.target.value)}
-                required
                 />
-            </div>
+            </Form.Group>
+            
+                
+            
 
             <div className="form-item">
                 <label htmlFor="magnitudeOne">On a scale from 1-10, how strongly are you feeling this way?</label>
@@ -183,7 +178,7 @@ function CreateFeeling(props) {
                 <button type="submit">Submit</button>
             </div>
 
-        </form>
+        </Form>
     )
 
 }

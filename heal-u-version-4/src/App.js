@@ -9,6 +9,7 @@ import ParticlesWrapper from "./components/ParticlesWrapper.jsx";
 import Feeling from "./components/Feeling.jsx";
 import About from "./components/About.jsx";
 import Form from "./components/Form.jsx";
+// import BarChart from './components/BarChart.jsx';
 
 import { Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -74,12 +75,7 @@ function App() {
               
           </Table> 
         </main>
-          
 
-
-          
-
-        
       </Route>
 
       <Route path="/new">
@@ -90,7 +86,10 @@ function App() {
         <Form feelings={feelings} setToggleFetch={setToggleFetch}/>
       </Route>
 
-      <Route path="/visualize"></Route>
+      <Route path="/visualize">
+        
+
+      </Route>
 
       <Route path="/about">
         <About />
