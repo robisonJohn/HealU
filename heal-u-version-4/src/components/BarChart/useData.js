@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { csv } from 'd3';
 
 const csvUrl = 'https://raw.githubusercontent.com/robisonJohn/CSV-Hosting/main/healUversionFour-Grid%20view-5.csv';
